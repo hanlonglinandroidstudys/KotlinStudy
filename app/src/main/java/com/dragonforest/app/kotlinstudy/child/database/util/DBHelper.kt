@@ -4,6 +4,7 @@ import android.content.Context
 import com.dragonforest.app.kotlinstudy.child.database.entity.StudentEntity
 import org.litepal.LitePal
 import org.litepal.crud.LitePalSupport
+import org.litepal.extension.delete
 import org.litepal.extension.findAll
 
 /**
@@ -27,7 +28,14 @@ object DBHelper {
         }
     }
 
-    inline fun <reified T> get():List<T>{
+    inline fun <reified T> delete(id: Long, t: T) {
+        if (t is LitePalSupport) {
+            LitePal.delete<T>(id)
+        }
+    }
+
+
+    inline fun <reified T> get(): MutableList<T> {
         return LitePal.findAll<T>()
     }
 

@@ -9,5 +9,5 @@ import org.litepal.crud.LitePalSupport
 class StudentEntity: LitePalSupport() {
     var id: Long = 0
     var name: String = ""
-    var sex: String = ""
+    var password: String = ""
 }

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.dragonforest.app.kotlinstudy.child.constraintLayout.FgConstraintLayout
+import com.dragonforest.app.kotlinstudy.child.database.FgDatabase
 import com.dragonforest.app.kotlinstudy.child.hencoder1.FgHencoder1
 import com.dragonforest.app.kotlinstudy.child.hencoder2.FgHencoder2
 import com.dragonforest.app.kotlinstudy.child.hencoder3.FgHencoder3
@@ -41,5 +42,7 @@ class HomeActivity : AppCompatActivity() {
         titles.add("kotlin的泛型")
         fgs.add(FgConstraintLayout("https://juejin.im/post/5ce3b68b518825336e0a5190"))
         titles.add("ConstraintLayout(即刻团队)")
+        fgs.add(FgDatabase("https://github.com/LitePalFramework/LitePal"))
+        titles.add("kotlin数据库测试")
     }
 }
