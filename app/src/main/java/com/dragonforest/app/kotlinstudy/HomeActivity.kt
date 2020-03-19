@@ -6,6 +6,8 @@ import androidx.fragment.app.Fragment
 import com.dragonforest.app.kotlinstudy.child.constraintLayout.FgConstraintLayout
 import com.dragonforest.app.kotlinstudy.child.hencoder1.FgHencoder1
 import com.dragonforest.app.kotlinstudy.child.hencoder2.FgHencoder2
+import com.dragonforest.app.kotlinstudy.child.hencoder3.FgHencoder3
+import com.dragonforest.app.kotlinstudy.child.hencoder3.FgHencoder4
 import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity() {
@@ -33,8 +35,10 @@ class HomeActivity : AppCompatActivity() {
         titles.add("kotin的变量，函数和类型")
         fgs.add(FgHencoder2("https://kaixue.io/kotlin-basic-2/"))
         titles.add("kotlin那些不是那么写的")
-        fgs.add(FgHencoder1("https://kaixue.io/kotlin-basic-3/"))
+        fgs.add(FgHencoder3("https://kaixue.io/kotlin-basic-3/"))
         titles.add("kotlin那些更方便的")
+        fgs.add(FgHencoder4("https://kaixue.io/kotlin-generics/"))
+        titles.add("kotlin的泛型")
         fgs.add(FgConstraintLayout("https://juejin.im/post/5ce3b68b518825336e0a5190"))
         titles.add("ConstraintLayout(即刻团队)")
     }
