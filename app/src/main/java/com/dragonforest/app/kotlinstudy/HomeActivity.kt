@@ -9,6 +9,7 @@ import com.dragonforest.app.kotlinstudy.child.hencoder1.FgHencoder1
 import com.dragonforest.app.kotlinstudy.child.hencoder2.FgHencoder2
 import com.dragonforest.app.kotlinstudy.child.hencoder3.FgHencoder3
 import com.dragonforest.app.kotlinstudy.child.hencoder3.FgHencoder4
+import com.dragonforest.app.kotlinstudy.child.hencoder3.FgHencoder5
 import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity() {
@@ -40,6 +41,8 @@ class HomeActivity : AppCompatActivity() {
         titles.add("kotlin那些更方便的")
         fgs.add(FgHencoder4("https://kaixue.io/kotlin-generics/"))
         titles.add("kotlin的泛型")
+        fgs.add(FgHencoder5("https://kaixue.io/kotlin-coroutines-1/"))
+        titles.add("kotlin的协程瞥一眼")
         fgs.add(FgConstraintLayout("https://juejin.im/post/5ce3b68b518825336e0a5190"))
         titles.add("ConstraintLayout(即刻团队)")
         fgs.add(FgDatabase("https://github.com/LitePalFramework/LitePal"))

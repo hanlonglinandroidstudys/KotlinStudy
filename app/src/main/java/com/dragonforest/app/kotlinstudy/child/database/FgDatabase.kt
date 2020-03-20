@@ -3,6 +3,7 @@ package com.dragonforest.app.kotlinstudy.child.database
 import android.app.AlertDialog
 import android.content.DialogInterface
 import android.os.Bundle
+import android.text.TextUtils
 import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -44,6 +45,11 @@ class FgDatabase(val mlink: String) : BaseFragment(mlink), View.OnClickListener,
             R.id.btn_add_stu -> {
                 var name = ed_name.text.toString()
                 var passwd = ed_password.text.toString()
+                if (TextUtils.isEmpty(name)
+                    || TextUtils.isEmpty(passwd)
+                ) {
+                    return
+                }
                 var stu = StudentEntity()
                 stu.name = name
                 stu.password = passwd

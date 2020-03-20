@@ -11,6 +11,6 @@ import com.dragonforest.app.kotlinstudy.child.BaseFragment
 class FgHencoder4(var mLink: String) : BaseFragment(mLink) {
 
     override fun getCustomLayout(): Int {
-        return R.layout.fg_hencoder3
+        return R.layout.fg_hencoder4
     }
 }
