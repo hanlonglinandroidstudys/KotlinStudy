@@ -6,16 +6,31 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
-    <com.google.android.material.tabs.TabLayout
+<!--    <com.google.android.material.tabs.TabLayout-->
+<!--        android:id="@+id/tl_main"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:tabMode="scrollable"-->
+<!--        app:tabTextColor="@android:color/darker_gray"-->
+<!--        app:tabSelectedTextColor="@android:color/black"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <com.dragonforest.tablayoutlib.tablayout.ColorTrackTabLayout
         android:id="@+id/tl_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabMode="scrollable"
-        app:tabTextColor="@android:color/darker_gray"
-        app:tabSelectedTextColor="@android:color/black"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:ct_startScrollX="60dp"
+        app:ct_tabMode="scroll"
+        app:ct_tabPadding="10dp"
+        app:ct_tabSelectScale="1.1"
+        app:ct_tabSelectTextColor="#FF0000"
+        app:ct_tabTextColor="@android:color/darker_gray"
+        app:ct_tabTextSize="18sp" />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/vp_main"

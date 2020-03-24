@@ -29,7 +29,7 @@ class HomeActivity : AppCompatActivity() {
         mainFragmentAdapter.fragments = fgs
         mainFragmentAdapter.titles = titles
         vp_main.adapter = mainFragmentAdapter
-        tl_main.setupWithViewPager(vp_main)
+        tl_main.setUpWithViewPager(vp_main)
     }
 
     private fun getFragmentsAndTitles(fgs: MutableList<Fragment>, titles: MutableList<String>) {
@@ -42,7 +42,7 @@ class HomeActivity : AppCompatActivity() {
         fgs.add(FgHencoder4("https://kaixue.io/kotlin-generics/"))
         titles.add("kotlin的泛型")
         fgs.add(FgHencoder5("https://kaixue.io/kotlin-coroutines-1/"))
-        titles.add("kotlin的协程瞥一眼")
+        titles.add("kotlin的tl_main协程瞥一眼")
         fgs.add(FgConstraintLayout("https://juejin.im/post/5ce3b68b518825336e0a5190"))
         titles.add("ConstraintLayout(即刻团队)")
         fgs.add(FgDatabase("https://github.com/LitePalFramework/LitePal"))
