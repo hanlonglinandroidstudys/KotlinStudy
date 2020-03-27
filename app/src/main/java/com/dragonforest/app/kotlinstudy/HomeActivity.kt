@@ -10,6 +10,7 @@ import com.dragonforest.app.kotlinstudy.child.hencoder2.FgHencoder2
 import com.dragonforest.app.kotlinstudy.child.hencoder3.FgHencoder3
 import com.dragonforest.app.kotlinstudy.child.hencoder3.FgHencoder4
 import com.dragonforest.app.kotlinstudy.child.hencoder3.FgHencoder5
+import com.dragonforest.app.kotlinstudy.child.okhttptest.FgOkhttp
 import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity() {
@@ -45,6 +46,8 @@ class HomeActivity : AppCompatActivity() {
         titles.add("kotlin的tl_main协程瞥一眼")
         fgs.add(FgConstraintLayout("https://juejin.im/post/5ce3b68b518825336e0a5190"))
         titles.add("ConstraintLayout(即刻团队)")
+        fgs.add(FgOkhttp("https://www.sojson.com/api/weather.html"))
+        titles.add("okhttp测试")
         fgs.add(FgDatabase("https://github.com/LitePalFramework/LitePal"))
         titles.add("kotlin数据库测试")
     }
