@@ -10,9 +10,7 @@ import com.dragonforest.app.kotlinstudy.child.okhttptest.model.CityDTO
 import com.dragonforest.app.kotlinstudy.child.okhttptest.model.CityGenerator
 import kotlinx.android.synthetic.main.fg_okhttp1.*
 import kotlinx.coroutines.*
-import okhttp3.FormBody
-import okhttp3.OkHttpClient
-import okhttp3.Request
+import okhttp3.*
 
 /**
  *
@@ -31,7 +29,7 @@ class FgOkhttp(var mLink: String) : BaseFragment(mLink), View.OnClickListener {
         btn_post.setOnClickListener(this)
 
         ed_url_get.setText("http://t.weather.sojson.com/api/weather/city")
-        ed_url_post.setText("https://www.wanandroid.com/lg/uncollect/2805/json")
+        ed_url_post.setText("http://www.wanandroid.com/lg/todo/add/json")
         var adapter = CityAdapter()
         adapter.cityList = CityGenerator.citys
         sp_city.adapter = adapter
@@ -59,6 +57,7 @@ class FgOkhttp(var mLink: String) : BaseFragment(mLink), View.OnClickListener {
     private fun doPost() {
         CoroutineScope(newSingleThreadContext("")).launch(Dispatchers.Main) {
             tv_result.setText("请求中...")
+            var loginStr = login()
             var responseStr = postResult(getPostUrl())
             tv_result.setText(responseStr)
         }
@@ -98,11 +97,29 @@ class FgOkhttp(var mLink: String) : BaseFragment(mLink), View.OnClickListener {
         }
     }
 
+    private suspend fun login(): String {
+        return withContext(Dispatchers.Default) {
+            var formBody = FormBody.Builder()
+                .add("username", "hanlonglin")
+                .add("password", "longlin1234")
+                .build()
+            var client: OkHttpClient = ApiServer.makeOkhttpClient()
+            var request: Request = Request.Builder()
+                .url("https://www.wanandroid.com/user/login")
+                .post(formBody)
+                .build()
+            client.newCall(request).execute().body!!.string()
+        }
+    }
+
     private suspend fun postResult(url: String): String? {
         log("url->$url")
         return withContext(Dispatchers.Default) {
             var formBody = FormBody.Builder()
-                .add("originId","-1")
+                .add("title", "标题1")
+                .add("content", "内容2")
+                .add("date", "2020-03-28")
+                .add("type", "0")
                 .build()
             var client: OkHttpClient = ApiServer.makeOkhttpClient()
             var request: Request = Request.Builder()

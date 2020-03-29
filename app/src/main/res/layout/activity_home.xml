@@ -30,7 +30,7 @@
         app:ct_tabSelectScale="1.1"
         app:ct_tabSelectTextColor="#FF0000"
         app:ct_tabTextColor="@android:color/darker_gray"
-        app:ct_tabTextSize="18sp" />
+        app:ct_tabTextSize="15sp" />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/vp_main"

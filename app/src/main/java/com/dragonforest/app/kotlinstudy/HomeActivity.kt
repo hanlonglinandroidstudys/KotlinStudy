@@ -11,6 +11,7 @@ import com.dragonforest.app.kotlinstudy.child.hencoder3.FgHencoder3
 import com.dragonforest.app.kotlinstudy.child.hencoder3.FgHencoder4
 import com.dragonforest.app.kotlinstudy.child.hencoder3.FgHencoder5
 import com.dragonforest.app.kotlinstudy.child.okhttptest.FgOkhttp
+import com.dragonforest.app.kotlinstudy.child.retrofittest.FgRetrofit
 import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity() {
@@ -48,6 +49,8 @@ class HomeActivity : AppCompatActivity() {
         titles.add("ConstraintLayout(即刻团队)")
         fgs.add(FgOkhttp("https://www.sojson.com/api/weather.html"))
         titles.add("okhttp测试")
+        fgs.add(FgRetrofit("https://square.github.io/retrofit/"))
+        titles.add("retrofit测试")
         fgs.add(FgDatabase("https://github.com/LitePalFramework/LitePal"))
         titles.add("kotlin数据库测试")
     }
