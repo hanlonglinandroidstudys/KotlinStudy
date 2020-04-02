@@ -6,7 +6,7 @@ import com.dragonforest.app.kotlinstudy.R
 import com.dragonforest.app.kotlinstudy.child.BaseFragment
 import com.dragonforest.app.kotlinstudy.child.retrofit.model.CityDTO
 import com.dragonforest.app.kotlinstudy.child.retrofit.model.CityGenerator
-import com.dragonforest.app.kotlinstudy.child.retrofittest.api.WheatherApiFactory
+import com.dragonforest.app .kotlinstudy.child.retrofittest.api.WheatherApiFactory
 import kotlinx.android.synthetic.main.fg_retrofit1.*
 import kotlinx.coroutines.*
 

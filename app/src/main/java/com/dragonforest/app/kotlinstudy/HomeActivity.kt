@@ -1,5 +1,6 @@
 package com.dragonforest.app.kotlinstudy
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -12,6 +13,7 @@ import com.dragonforest.app.kotlinstudy.child.hencoder3.FgHencoder4
 import com.dragonforest.app.kotlinstudy.child.hencoder3.FgHencoder5
 import com.dragonforest.app.kotlinstudy.child.okhttptest.FgOkhttp
 import com.dragonforest.app.kotlinstudy.child.retrofittest.FgRetrofit
+import com.dragonforest.app.kotlinstudy.child.rxjavatest.FgRxjava
 import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity() {
@@ -51,7 +53,11 @@ class HomeActivity : AppCompatActivity() {
         titles.add("okhttp测试")
         fgs.add(FgRetrofit("https://square.github.io/retrofit/"))
         titles.add("retrofit测试")
+        fgs.add(FgRxjava("https://gank.io/post/560e15be2dca930e00da1083"))
+        titles.add("rxjava测试")
         fgs.add(FgDatabase("https://github.com/LitePalFramework/LitePal"))
         titles.add("kotlin数据库测试")
+
+        Intent.ACTION_AIRPLANE_MODE_CHANGED
     }
 }
