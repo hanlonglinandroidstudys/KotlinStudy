@@ -9,6 +9,7 @@ import com.dragonforest.app.kotlinstudy.child.retrofit.model.CityGenerator
 import com.dragonforest.app.kotlinstudy.child.retrofittest.api.WheatherApiFactory
 import kotlinx.android.synthetic.main.fg_retrofit1.*
 import kotlinx.coroutines.*
+import java.lang.Exception
 
 /**
  *
@@ -48,8 +49,12 @@ class FgRetrofit(var mLink: String) : BaseFragment(mLink), View.OnClickListener 
 
     private suspend fun getWheather(code: String): String {
         return withContext(Dispatchers.Default) {
-            var result=WheatherApiFactory.getWheatherService().getWheather(code).execute()
-            result.body().toString()
+            try {
+                var result = WheatherApiFactory.getWheatherService().getWheather(code).execute()
+                result.body().toString() ?: "无结果"
+            } catch (e: Exception) {
+                "${e.message}"
+            }
         }
     }
 

@@ -10,8 +10,10 @@ import com.dragonforest.app.kotlinstudy.child.hencoder2.FgHencoder2
 import com.dragonforest.app.kotlinstudy.child.hencoder3.FgHencoder3
 import com.dragonforest.app.kotlinstudy.child.hencoder3.FgHencoder4
 import com.dragonforest.app.kotlinstudy.child.hencoder3.FgHencoder5
+import com.dragonforest.app.kotlinstudy.child.ktfunction.FgFunction
 import com.dragonforest.app.kotlinstudy.child.okhttptest.FgOkhttp
 import com.dragonforest.app.kotlinstudy.child.retrofittest.FgRetrofit
+import com.dragonforest.app.kotlinstudy.util.SystemUtil
 import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity() {
@@ -21,6 +23,10 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
 
         initView()
+
+        val userAgent = System.getProperty("http.agent")
+        println("Android 系统自带的UA==$userAgent")
+        println("设备信息->${SystemUtil.getUniqueDeviceID(this,true)}")
     }
 
     private fun initView() {
@@ -53,5 +59,7 @@ class HomeActivity : AppCompatActivity() {
         titles.add("retrofit测试")
         fgs.add(FgDatabase("https://github.com/LitePalFramework/LitePal"))
         titles.add("kotlin数据库测试")
+        fgs.add(FgFunction("https://mp.weixin.qq.com/s/SsMtsw45dMdr3uI55cFmyQ"))
+        titles.add("kotlin函数式编程")
     }
 }

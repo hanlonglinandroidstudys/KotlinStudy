@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">KotlinStudy</string>
+
+    <string name="tv_icons1">&#xe62b;</string>
+    <string name="tv_icons2">&#xe6a0;</string>
+    <string name="tv_icons3">&#xe685;</string>
 </resources>

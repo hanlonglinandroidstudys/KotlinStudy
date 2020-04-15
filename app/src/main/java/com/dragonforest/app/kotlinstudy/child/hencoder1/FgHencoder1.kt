@@ -4,6 +4,9 @@ import android.os.Bundle
 import android.view.View
 import com.dragonforest.app.kotlinstudy.R
 import com.dragonforest.app.kotlinstudy.child.BaseFragment
+import android.graphics.Typeface
+import kotlinx.android.synthetic.main.fg_hencoder1.*
+
 
 /**
  *
@@ -24,5 +27,11 @@ class FgHencoder1(var mLink: String) : BaseFragment(mLink) {
         var otherBoxA: Int = a
         println("比较2->${otherBoxA == boxA}")
         println("比较3->${otherBoxA === boxA}")
+
+
+        val iconfont = Typeface.createFromAsset(context?.assets, "iconfont.ttf")
+        tv_test_svg1.typeface=iconfont
+        tv_test_svg2.typeface=iconfont
+        tv_test_svg3.typeface=iconfont
     }
 }
