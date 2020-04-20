@@ -1,12 +1,12 @@
 package com.dragonforest.app.kotlinstudy
 
 import androidx.test.platform.app.InstrumentationRegistry
-import androidx.test.ext.junit.runners.AndroidJUnit4
-
+import androidx.test.runner.AndroidJUnit4
+import com.dragonforest.app.kotlinstudy.kotlinclasstest.BaseAnimal
+import com.dragonforest.app.kotlinstudy.kotlinclasstest.Bird
+import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.junit.runner.RunWith
-
-import org.junit.Assert.*
 
 /**
  * Instrumented test, which will execute on an Android device.
@@ -20,5 +20,13 @@ class ExampleInstrumentedTest {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
         assertEquals("com.dragonforest.app.kotlinstudy", appContext.packageName)
+    }
+
+    @Test
+    fun testClass(){
+        var base=BaseAnimal()
+        var bird=Bird()
+        base.run()
+        bird.run()
     }
 }
